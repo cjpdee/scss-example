@@ -1,0 +1,11 @@
+$block: "calendar";
+
+.#{$block} {
+  // container styles
+
+  &__day {
+    &.is-current {
+      // highlight current day
+    }
+  }
+}

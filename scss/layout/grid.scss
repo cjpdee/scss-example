@@ -1,0 +1,39 @@
+$block: "grid";
+
+/**
+ * Since this is a layout-only component,
+ * we don't want to add any visual styles.
+ * Any components inside the grid can be
+ * styled independently.
+ */
+
+$grid-gap-mobile: 8px;
+$grid-gap-desktop: 12px;
+
+.#{$block} {
+  display: grid;
+  grid-template-columns: 1;
+  gap: $grid-gap-mobile;
+
+  // original styles are mobile,
+  // breakpoints go upwards to desktop styles
+  @include bp(laptop) {
+    gap: $grid-gap-desktop;
+  }
+
+  &--2 {
+    @include bp(tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &--3 {
+    @include bp(tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include bp(laptop) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}

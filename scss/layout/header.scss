@@ -1,0 +1,9 @@
+$block: "header";
+
+.#{$block} {
+  // mobile header styles
+
+  @include bp(laptop) {
+    // laptop header styles
+  }
+}

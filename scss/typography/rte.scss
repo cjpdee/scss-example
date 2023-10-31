@@ -1,0 +1,48 @@
+$block: "rte";
+
+/**
+ * This is an example of when elements
+ * should be styled directly.
+ * 
+ * The .rte class, or 'rich text editor',
+ * is used when semantic HTML is recieved
+ * from the server and needs to be styled.
+ * 
+ * Since we don't know what the HTML will be
+ * and we can't style it, we use this class
+ * as a 'parent' to target the elements inside.
+ * 
+ * This way we can set up rules for fonts, margins
+ * etc. to allow the HTML to be styled naturally
+ * without the need to manually adjust them.
+ * 
+ * While we shouldn't directly style elements too
+ * much, doing it in an enclosed scope like this 
+ * is fine if the need calls for it.
+ */
+
+.#{$block} {
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    font-family: $ff-headings;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+
+  & p {
+    // paragraph styles
+  }
+
+  & a {
+    color: $c-primary;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

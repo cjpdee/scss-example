@@ -1,0 +1,22 @@
+$block: "table";
+
+.#{$block} {
+  // base styles
+
+  &--borders {
+    border: 1px solid black;
+  }
+
+  &__row {
+    // base row styles
+
+    .#{$block}--borders {
+      // modifier applied - adds a border
+      border-bottom: 1px solid black;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+$block: "button";
+
+$button-padding: 12px;
+$icon-size-mobile: 12px;
+$icon-size-desktop: 24px;
+
+.#{$block} {
+  // base styles
+  padding: $button-padding;
+  border: 1px solid;
+  border-radius: 4px;
+
+  &--primary {
+    // primary button styles
+    background-color: $c-primary;
+    color: white;
+  }
+
+  &--secondary {
+    // secondary button styles
+    background-color: $c-secondary;
+    color: white;
+  }
+
+  &--error {
+    // error button styles
+    background-color: $c-negative;
+    color: white;
+  }
+
+  &__icon {
+    // icon styles
+    width: $icon-size-mobile;
+    height: $icon-size-mobile;
+
+    @include bp(laptop) {
+      width: $icon-size-desktop;
+      height: $icon-size-desktop;
+    }
+
+    .#{$block}--primary & {
+      // primary button icon styles
+      fill: $c-primary;
+      stroke: white;
+    }
+
+    .#{$block}--secondary & {
+      // secondary button icon styles
+      fill: $c-secondary;
+      stroke: white;
+    }
+
+    .#{$block}--error & {
+      // error button icon styles
+      fill: $c-negative;
+      stroke: white;
+    }
+  }
+}

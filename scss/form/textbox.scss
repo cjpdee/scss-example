@@ -1,0 +1,9 @@
+$block: "input-text";
+
+.#{$block} {
+  // base styles
+
+  &--error {
+    // error styles
+  }
+}

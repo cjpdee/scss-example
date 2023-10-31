@@ -1,0 +1,35 @@
+$block: "page";
+
+$page-padding: 32px;
+
+/**
+ * If we imagine a regular Synergist layout,
+ * a 'page' is the frame that sits inside each
+ * tab.
+ * Since every page has the same heading styles
+ * and subnav, we can keep reusing this component.
+ * Build it once, and we can apply it to any number
+ * of pages without any extra work.
+ */
+
+.#{$block} {
+  width: 100%;
+  height: 100%;
+  padding: $page-padding;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    // heading styles
+  }
+
+  &__nav {
+    // subnav styles
+  }
+}
