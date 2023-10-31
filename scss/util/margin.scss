@@ -1,0 +1,31 @@
+$base: 4px; // base unit for generating classes.
+// $base value is decided by the design system in the UI.
+
+/**
+ * Just a test example.
+ * These classes can be generated with a mixin. 
+ */
+
+.mt {
+  &-1 {
+    margin-top: $base * 1;
+  }
+  &-2 {
+    margin-top: $base * 2;
+  }
+  &-3 {
+    margin-top: $base * 3;
+  }
+}
+
+.mb {
+  &-1 {
+    margin-bottom: $base * 1;
+  }
+  &-2 {
+    margin-bottom: $base * 2;
+  }
+  &-3 {
+    margin-bottom: $base * 3;
+  }
+}

@@ -1,0 +1,23 @@
+/**
+ * As in https://tailwindcss.com/docs/flexbox
+ */
+
+.flex {
+  display: flex;
+}
+
+.laptop\:flex {
+  @include bp(laptop) {
+    display: flex;
+  }
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.laptop\:justify-center {
+  @include bp(laptop) {
+    justify-content: center;
+  }
+}
